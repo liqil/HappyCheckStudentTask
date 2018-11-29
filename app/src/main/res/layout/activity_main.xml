@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="60dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="科  目：" />
+            <Spinner
+                android:id="@+id/subject_spinner"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/subject">
+            </Spinner>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart='30dp'
+                android:text="年  级："/>
+            <Spinner
+                android:id="@+id/grade_spinner"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/grade">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="60dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart='5dp'
+                android:text="班  级："/>
+            <Spinner
+                android:id="@+id/classx_spinner"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/classx">
+            </Spinner>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart='30dp'
+                android:text="批  次："/>
+            <Spinner
+                android:id="@+id/batch_spinner"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/batch">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="false">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="60dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart='5dp'
+                android:text="日     期："/>
+            <EditText
+                android:id="@+id/date"
+                android:inputType="datetime"
+                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                android:focusableInTouchMode="false"
+                android:onClick="getTime"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_scan"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/btn_circle"
+            android:text="扫描"
+            android:textColor="#FFFFFFFF" />
+
+    </LinearLayout>
+</LinearLayout>

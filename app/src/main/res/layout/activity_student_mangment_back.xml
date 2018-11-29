@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="科  目：" />
+        <Spinner
+            android:id="@+id/subject_spinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/subject">
+        </Spinner>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart='20dp'
+            android:text="年  级："/>
+        <Spinner
+            android:id="@+id/grade_spinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/grade">
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart='10dp'
+            android:text="班  级："/>
+        <Spinner
+            android:id="@+id/classx_spinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/classx">
+        </Spinner>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart='20dp'
+            android:text="日  期："/>
+        <EditText
+            android:id="@+id/date"
+            android:inputType="datetime"
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:onClick="getTime"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart='10dp'
+            android:text="学     生："/>
+        <EditText
+            android:id="@+id/student_name"
+            android:inputType="textPersonName"
+            android:layout_height="wrap_content"
+            android:layout_width="280dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="160dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart='10dp'
+            android:text="学     号："/>
+        <EditText
+            android:id="@+id/student_num"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"
+            android:layout_width="280dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="220dp">
+        <Button
+            android:id="@+id/btn_read_db_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp"
+            android:text="刷新学生信息"/>
+
+        <Button
+            android:id="@+id/btn_add_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:layout_marginStart="140dp"
+            android:text="增加"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="280dp">
+        <com.baoyz.swipemenulistview.SwipeMenuListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>

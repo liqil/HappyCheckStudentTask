@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f974a1</color>
+    <color name="colorPrimaryDark">#f974a1</color>
+    <color name="colorAccent">#f974a1</color>
+
+    <color name="scan_corner_color">#f974a1</color>
+</resources>
